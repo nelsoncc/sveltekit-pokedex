@@ -2,6 +2,16 @@
   import {pokemons} from "../stores/pokestore";
   import PokemonCard from "../components/pokemonCard.svelte";
   let searchPokemon = "";
+  let filteredPokemons = [];
+
+  $: {
+    console.log(searchPokemon)
+    if(searchPokemon) {
+        filteredPokemons = $pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchPokemon.toLowerCase()));
+    } else {
+      filteredPokemons = [...$pokemons];
+    }
+  }
 
   console.log($pokemons);
 </script>
@@ -14,7 +24,7 @@
        bind:value={searchPokemon}  type="text" placeholder="Search Pokemon">
 
 <div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
-    {#each $pokemons as pokemon}
+    {#each filteredPokemons as pokemon}
         <PokemonCard pokemon="{pokemon}"/>
     {/each}
 </div>
