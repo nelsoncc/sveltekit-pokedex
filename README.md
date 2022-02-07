@@ -1,24 +1,10 @@
-# create-svelte
+# Description
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+My first sveltekit application that uses the Pokemon API to build a Pokedex!
 
-## Creating a project
+# Developing
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned this project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -27,14 +13,15 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+# TODO list
+## Features
+- Night mode
+- Toggle for HD images
+- Scroll infinite loading
+- Filter by type (fire, water, ...)
 
-To create a production version of your app:
+## Technical Debt
+- Cypress tests
+- Storybook
 
-```bash
-npm run build
-```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment.
